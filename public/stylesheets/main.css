@@ -83,6 +83,11 @@
   }
 }
 
+label {
+  font-size: 0.83em;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
   .wrapper {
     -moz-box-shadow: none;
@@ -112,4 +117,5 @@
     font-size: 18px;
     line-height: 24px;
   }
+
 }

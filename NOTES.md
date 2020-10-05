@@ -37,3 +37,13 @@ PATCH     | /STORIES/:ID         | EDIT
 -this is the go between
 -holds all of the basic functions
 -remember its the waiter, it goes between the kitchen and the person ordering
+
+<footer class="branding">
+        <% if logged_in? %>
+          <h4>Welcome <%= current_user.username %></h4>
+          <h4><a href="/logout">Log Out</a></h4>
+        <% else %>
+          <h4><a href="/login">Log In</a></h4>
+        <% end %>
+        <small>&copy; 2020 <strong>Sophia White</strong></small>
+  </footer>

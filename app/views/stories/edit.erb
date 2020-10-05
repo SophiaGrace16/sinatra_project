@@ -1,0 +1,39 @@
+<h1>What? You mean you want to change the story?</h1>
+<p> That does not seem fair...</p>
+<form action="/stories/<%=@storeies.id%>" method="POST">
+<h2>Edit the details of your tale:</h2></br>
+
+<label for= “title”>Title:</label>
+<p><input type="text" name="title" id="title" value ="<%=@story.title%>"></p></br>
+
+<label for= “num_of_players”>Number of Players:</label>
+<p><input type="text" name="num_of_players" id="num_of_players" value ="<%=@story.num_of_players%>" ></p></br>
+
+<label for= “type”>Type of Campaign:</label>
+<p><input type="text" name="campaign" id="campaign" value ="<%=@story.type%>"></p></br>
+
+<label for= “setting”>Setting:</label>
+<p><input type="text" name="setting" id="setting" value ="<%=@story.setting%>"></p></br>
+
+<label for= “monsters”>Monsters:</label>
+<p><input type="text" name="monsters" id="monsters" value ="<%=@story.monsters%>"></p></br>
+
+<label for= “final_boss”>Final Boss:</label>
+<p><input type="final_boss" name="final_boss" id="final_boss" value ="<%=@story.final_boss%>"></p></br>
+
+<label for= “rewards”>Rewards:</label>
+<p><input type="rewards" name="rewards" id="rewards" value ="<%=@story.rewards%>"></p></br>
+
+<label for= “findables”>Findables:</label>
+<p><input type="findables" name="findables" id="findables" value ="<%=@story.findables%>"></p></br>
+
+<label for= “summary”>Summary:</label>
+<p>
+<textarea type="text" name="summary" id="summary" value ="<%=@story.summary%>" rows="10" cols="50"><%=@story.summary%></textarea>
+</p></br>
+
+<label for= “story_link”>Link to the Story:</label>
+<p><input type="story_link" name="story_link" id="story_link" value ="<%=@story.story_link%>"></p></br>
+
+<input type='submit' id='submit' value='Edit Story!'
+</form>

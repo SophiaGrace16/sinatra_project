@@ -1,0 +1,13 @@
+<h1>Your Collection of Stories:</h1>
+
+<ol><p>
+<% @stories.each do |story| %>
+    <li>
+    <a href="/stories/<%= story.id %>">
+    <%= story.name %>
+    </a>
+    </li>
+<%end%>
+</p></ol>
+
+<p> Don't smile too much... they will know you are up to something! </p>

@@ -1,0 +1,13 @@
+<h1>Your Arsenal of Characters:</h1>
+
+<ol><p>
+<% @characters.each do |character| %>
+    <li>
+    <a href="/characters/<%= character.id %>">
+    <%= character.name %>
+    </a>
+    </li>
+<%end%>
+</p></ol>
+
+<p> Beware the smiling dm.... </p>
