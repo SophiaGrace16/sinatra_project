@@ -15,3 +15,6 @@ class ApplicationController < Sinatra::Base
   end
 
 end
+
+#helper methods (current user, logged in, etc. - any authentication)
+#application wide

@@ -1,23 +1,23 @@
 ##RESTFUL ROUTES
 
-HTTP VERB | ROUTE               | ACTION
-----------|---------------------|----------
-GET       | /CHARACTERS         | INDEX     - SHOWS THE CHARACTERS INDEX
-GET       | /STORIES            | INDEX     - SHOWS THE STORIES INDEX
-GET       | /CHARACTER/:ID      | SHOW      - SHOWS THE CHARACTER
-GET       | /STORIES/:ID        | SHOW      - SHOWS THE CHARACTER
-GET       | /CHARACTERS/C_NEW   | NEW       - SHOW THE NEW FORM
-GET       | /STORIES/S_NEW      | NEW       - SHOWS THE NEW FORM
-GET       | /CHARACTER/:ID/EDIT | EDIT      - SHOWS THE EDIT FORM
-GET       | /STORIES/:ID/EDIT   | EDIT      - SHOWS THE EDIT FORM
-----------|---------------------|-----------
-POST      | /CHARACTERS         | CREATE
-POST      | /STORIES            | CREATE
-DELETE    | /CHARACTERS/:ID     | DELETE
-DELETE    | /STORIES/:ID        | DELETE
-----------|---------------------|-----------
-PATCH     | /CHARACTERS/:ID     | EDIT
-PATCH     | /STORIES/:ID        | EDIT
+HTTP VERB | ROUTE                | ACTION
+----------|----------------------|----------
+GET       | /CHARACTERS          | INDEX     - SHOWS THE CHARACTERS INDEX
+GET       | /STORIES             | INDEX     - SHOWS THE STORIES INDEX
+GET       | /CHARACTERS/:ID      | SHOW      - SHOWS THE CHARACTER
+GET       | /STORIES/:ID         | SHOW      - SHOWS THE CHARACTER
+GET       | /CHARACTERS/NEW      | NEW       - SHOW THE NEW FORM
+GET       | /STORIES/NEW         | NEW       - SHOWS THE NEW FORM
+GET       | /CHARACTERS/:ID/EDIT | EDIT      - SHOWS THE EDIT FORM
+GET       | /STORIES/:ID/EDIT    | EDIT      - SHOWS THE EDIT FORM
+----------|----------------------|-----------
+POST      | /CHARACTERS          | CREATE
+POST      | /STORIES             | CREATE
+DELETE    | /CHARACTERS/:ID      | DELETE
+DELETE    | /STORIES/:ID         | DELETE
+----------|----------------------|-----------
+PATCH     | /CHARACTERS/:ID      | EDIT
+PATCH     | /STORIES/:ID         | EDIT
 
 ##MVC
 

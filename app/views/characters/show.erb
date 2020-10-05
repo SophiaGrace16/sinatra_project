@@ -1,0 +1,61 @@
+<h1>@character.name</h1>
+
+<label for= “class”>Class:</label>
+<p>
+<%=@character.class%>
+</p>
+
+<label for= “level”>Level:</label>
+<p>
+<%=@character.level%>
+</p>
+
+<label for= “race”>Race:</label>
+<p>
+<%=@character.race%>
+</p>
+
+<label for= “background”>Background:</label>
+<p>
+<%=@character.background%>
+</p>
+
+<label for= “strength”>Strength Stat:</label>
+<p>
+<%=@character.strength%>
+</p>
+
+<label for= "dexterity">Dexterity Stat:</label>
+<p>
+<%=@character.dexterity%>
+</p>
+
+<label for= “constitution”>Constitution Stat:</label>
+<p>
+<%=@character.constitution%>
+</p>
+
+<label for= "intelligence">Intelligence Stat:</label>
+<p>
+<%=@character.intelligence%>
+</p>
+
+<label for= “wisdom”>Wisdom Stat:</label>
+<p>
+<%=@character.wisdom%>
+</p>
+
+<label for= “charisma”>Charisma Stat:</label>
+<p>
+<%=@character.charisma%>
+</p>
+
+<label for= “character_story”>Character Story:</label>
+<p>
+<%=@character.story%>
+</p>
+
+<form action="/characters/<%=@character.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value ="Delete Character">
+</form>
