@@ -1,0 +1,2 @@
+class UserDMController < ApplicationController
+end
