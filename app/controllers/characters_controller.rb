@@ -1,6 +1,8 @@
-class SecondaryController < ApplicationController
-    get '/objects' do 
-        @objects = Object.all
+class CharactersController < ApplicationController
+    
+    
+    get '/characters' do 
+        @characters = Character.all
     end    
 
 end
