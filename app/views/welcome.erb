@@ -1,65 +1,28 @@
 <!DOCTYPE html>
 <html>
 <div class="container">
-  <header><img src="images/dnd.png" alt="Dungeons & Dragons" class="img-responsive main-image" width="500" height="200"></header>
+  <header><img src="images/dnd.png" alt="Dungeons & Dragons" class="main-image" width="500" height="200"></header>
   <div class="col-md-8 col-md-offset-2">
   <h1>Dungeons & Dragons Database</h1>
 
     <div class="content">
       <p> Welcome to the Dungeons & Dragons Database</p>
 
-    <body>
+      <h4>Choose.</h4>
+      </br>
+      <h5>Are you a <i>player</i> or a <i>dungeon master</i>?</h5>
+      </br>
 
-    <h4>Choose.</h4>
-    </br>
-    <h5>Are you a <i>player</i> or a <i>dungeon master</i>?</h5>
-    </br>
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
-      <div class="dropdown-content">
-        <a href="#">Dungeon Master</a>
-        <a href="#">Player</a>
-      </div>
+<body>
+
+    <div>
+       <button class="button"><a href="/dms/login">Player</button>
     </div>
 
-</body>
-      
+    <div>
+      <button class="button"><a href="/dms/login"> Dungeon Master</a></button>
     </div>
-    <style>
-.dropbtn {
-  background-color: #990000;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: white;
-}
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #990000;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #ff3e00;}
-</style>
+</body>      
 
 </html>
