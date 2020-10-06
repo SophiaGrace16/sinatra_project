@@ -88,6 +88,40 @@ label {
   font-weight: bold;
 }
 
+.button {
+  background-color: #990000;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid #4CAF50
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+}
+
+.button-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.button-content a {
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.main-image {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 600px) {
   .wrapper {
     -moz-box-shadow: none;

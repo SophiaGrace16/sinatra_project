@@ -16,7 +16,7 @@ POST      | /STORIES             | CREATE
 DELETE    | /CHARACTERS/:ID x    | DELETE
 DELETE    | /STORIES/:ID         | DELETE
 ----------|----------------------|-----------
-PATCH     | /CHARACTERS/:ID   x  | EDIT
+PATCH     | /CHARACTERS/:ID      | EDIT
 PATCH     | /STORIES/:ID         | EDIT
 
 ##MVC
