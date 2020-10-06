@@ -1,2 +1,2 @@
-class DMController < ApplicationController
+class DMsController < ApplicationController
 end
