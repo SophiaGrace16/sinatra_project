@@ -1,6 +1,5 @@
 class CharactersController < ApplicationController
-    
-    
+
     get '/characters' do 
         @characters = Character.all # shows the index of characters
         erb :index
