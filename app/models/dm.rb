@@ -1,3 +1,3 @@
-class Player < ActiveRecord::Base
+class DM < ActiveRecord::Base
     has_many :stories 
 end
