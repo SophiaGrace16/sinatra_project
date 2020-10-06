@@ -15,27 +15,27 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  helpers do
-    def logged_in?
-      session[:user_id]
-    end
+  # helpers do
+  #   def logged_in?
+  #     session[:user_id]
+  #   end
 
-    def current_user
-      @user ||= User.find_by(id: session[:user_id])
-    end
+  #   def current_user
+  #     @user ||= User.find_by(id: session[:user_id])
+  #   end
 
-    def redirect_if_not_logged_in
-      if !logged_in?
-        redirect "/login"
-      end
-    end
+  #   def redirect_if_not_logged_in
+  #     if !logged_in?
+  #       redirect "/login"
+  #     end
+  #   end
 
-    def redirect_if_logged_in
-      if logged_in?
-        redirect "/characters" || "/stories"
-      end
-    end
-  end
+  #   def redirect_if_logged_in
+  #     if logged_in?
+  #       redirect "/characters" || "/stories"
+  #     end
+  #   end
+  # end
 
 end
 

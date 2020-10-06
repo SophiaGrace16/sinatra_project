@@ -2,26 +2,27 @@ class StoriesController < ApplicationController
 
     get '/stories' do 
         @stories = Story.all # shows the index of stories
-        erb :index
+        erb :'stories/index'
     end
 
     get '/stories/new' do
         @story = Story.new
-        erb :new
+        erb :'stories/new'
     end
 
     post '/stories' do
         @story=Story.create(params)
         redirect to "/stories/#{@story.id}"
+    end
 
     get '/stories/:id' do 
         @stories = Story.find_by_id(params[:id])
-        erb :show
+        erb :'stories/show'
     end
 
     get '/stories/:id/edit' do
         @stories = Story.find_by_id(params[:id])
-        erb :edit
+        erb :'stories/edit'
     end
 
     patch '/stories/:id' do
