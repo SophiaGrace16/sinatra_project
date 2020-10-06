@@ -10,8 +10,8 @@ class PlayersController < ApplicationController
         erb :"players/signup"
     end
 
-    post "/character" do
-        @character=Character.create(params)
+    post "/player" do
+        @player=Player.create(params)
         redirect to "/player/characters" #how? because their homepage is really the characters index page
     end
 end
