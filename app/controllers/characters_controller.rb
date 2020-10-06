@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
     get '/characters' do 
-        @characters = Character.all # shows the index of characters
+        @characters = current_player.characters # shows the index of characters
         erb :'characters/index'
     end
 
