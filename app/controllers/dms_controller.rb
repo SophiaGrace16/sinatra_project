@@ -9,9 +9,9 @@ class DMsController < ApplicationController
         erb :"dms/signup"
     end
 
-    get "/dms" do
+    post "/dms" do
         @dm=DM.create(params)
-        redirect to "/dms/stories"
+        redirect to "/dms/#{@dm.id}"
     end
 
 
