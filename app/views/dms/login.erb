@@ -1,17 +1,31 @@
+<html>
 <head>
-<h1>Login to your Dungeon Master D&D Account!</h1>
+<style>
+img {
+  float: left;
+}
+</style>
 </head>
-<form action="/login" method="post">
-  <div class="imgcontainer">
-    <img src="dice.png" alt="dice" class="logo">
-  </div>
+<header>
+<div class="imgcontainer">
+    <img src="/images/dice.png" alt="dice" class="logo" style="width:50px;height:50px;margin-right:15px;">
+</div>
+<h1>Login to your Dungeon Master D&D Account!</h1>
+</header>
+</br>
+<form action="/dms/login" method="post">
   
     <label for="username"><b>Username:</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required></br>
-
-    <label for="ppassword_digest"><b>Password:</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required></br>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <br>
+    <label for="password"><b>Password:</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <br><br>
     <input type="submit" value = "Login">
+    <br>
 </form>
-<h6>Not a registered Dungeon Master yet?</h6>
-<a href="/dms/signup">Click here to sign up!</a>
+<br>
+<h5>Not a registered Dungeon Master yet?</h5>
+<h6><a href="/dms/signup">Click here to sign up!</a></h6>
+
+</html>
