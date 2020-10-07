@@ -50,4 +50,12 @@
 <a href="<%=@story.story_link%>"</a>
 </p>
 
+<a href="/stories/<%=@story.id%>/edit">Need to change something? Click here!</a></br>
+<a href="/stories">Click here to see all of your stories</a></br>
 
+<h6>Want to delete this story?</h6>
+<p>WARNING. This action is irreversible.</p>
+<form action="/stories/<%=@story.id%>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" value ="Delete Story">
+</form>

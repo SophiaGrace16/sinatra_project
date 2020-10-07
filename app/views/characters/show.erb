@@ -55,7 +55,13 @@
 <%=@character.story%>
 </p>
 
-<form action="/characters/<%=@character.id%>" method="post">
-    <input type="hidden" name="_method" value="delete">
+<a href="/characters/<%=@character.id%>/edit">Need to change something? Click here!</a></br>
+<a href="/characters">Click here to see all of your characters</a></br>
+<a href="/characters/new">Create a new character</a></br>
+
+<h6>Want to delete this character?</h6>
+<p>WARNING. This action is irreversible.</p>
+<form action="/characters/<%=@character.id%>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value ="Delete Character">
 </form>

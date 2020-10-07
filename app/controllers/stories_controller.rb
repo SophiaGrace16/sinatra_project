@@ -32,7 +32,8 @@ class StoriesController < ApplicationController
     end
 
     delete "/story/:id" do
-        Story.destroy(params[:id])
+        @story = Story.find_by_id(params[:id])
+        @story.destroy(params[:id])
         redirect to "/stories"
     end  
 end

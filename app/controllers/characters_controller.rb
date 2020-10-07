@@ -31,8 +31,9 @@ class CharactersController < ApplicationController
         redirect to "/characters/#{@character.id}"
     end
 
-    delete "/character/:id" do
-        Character.destroy(params[:id])
+    delete "/character/:id"
+        @character = Character.find_by_id(params[:id])
+        @character.destroy(params[:id])
         redirect to "/characters"
     end  
 
