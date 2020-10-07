@@ -25,20 +25,26 @@ class ApplicationController < Sinatra::Base
       session[:dm_id]
     end
 
-    def redirect_if_not_logged_in
-      if !logged_in?
+    def redirect_if_player_not_logged_in
+      if !player_logged_in?
         redirect "/login"
       end
     end
 
     def redirect_if_player_logged_in
-      if logged_in?
+      if player_logged_in?
         redirect "/characters"
       end
     end
 
+    def redirect_if_dm_not_logged_in
+      if !dm_logged_in?
+        redirect "/login"
+      end
+    end
+
     def redirect_if_dm_logged_in
-      if logged_in?
+      if dm_logged_in?
         redirect "/stories"
       end
     end
