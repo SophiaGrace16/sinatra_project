@@ -30,8 +30,9 @@ class CharactersController < ApplicationController
         @character.update(params[:character])
         redirect to "/characters/#{@character.id}"
     end
+    #35:17 Live Lecture User authen
 
-    delete "/character/:id"
+    delete "/character/:id" do
         @character = Character.find_by_id(params[:id])
         @character.destroy(params[:id])
         redirect to "/characters"

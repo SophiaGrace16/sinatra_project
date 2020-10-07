@@ -9,9 +9,9 @@ class PlayersController < ApplicationController
         @player = Player.find_by(username: params[:username])
         if !!@player && @player.authenticate(params[:password])
             session[:player_id] = @player.id
-            redirect to "/characters"
+            redirect_if_player_logged_in
         else
-            erb :"players/login"
+            redirect_if_not_logged_in
         end
     end
 
@@ -30,7 +30,10 @@ class PlayersController < ApplicationController
         redirect to "/player/#{@player.id}" #how? because their homepage is really the characters index page
     end
 
-    # get "/player/:id" do
+    get "/logout" do
+        session.clear
+        redirect "/login"
+    end
 
 end
 

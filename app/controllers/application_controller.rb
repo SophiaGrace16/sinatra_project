@@ -16,9 +16,32 @@ class ApplicationController < Sinatra::Base
   end
 
   helpers do
-  #   def logged_in?
-  #     session[:user_id]
-  #   end
+
+    def player_logged_in?
+      session[:player_id]
+    end
+
+    def dm_logged_in?
+      session[:dm_id]
+    end
+
+    def redirect_if_not_logged_in
+      if !logged_in?
+        redirect "/login"
+      end
+    end
+
+    def redirect_if_player_logged_in
+      if logged_in?
+        redirect "/characters"
+      end
+    end
+
+    def redirect_if_dm_logged_in
+      if logged_in?
+        redirect "/stories"
+      end
+    end
 
     def current_player
       @player ||= Player.find_by(id: session[:player_id])
@@ -28,17 +51,8 @@ class ApplicationController < Sinatra::Base
       @dm ||= DM.find_by(id: session[:dm_id])
     end
 
-  #   def redirect_if_not_logged_in
-  #     if !logged_in?
-  #       redirect "/login"
-  #     end
-  #   end
-
-  #   def redirect_if_logged_in
-  #     if logged_in?
-  #       redirect "/characters" || "/stories"
-  #     end
-  #   end
+    
+  
   end
 
 end
