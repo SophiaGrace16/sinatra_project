@@ -1,18 +1,24 @@
 class CharactersController < ApplicationController
 
     get '/characters' do 
-        @characters = current_player.characters # shows the index of characters
+        if logged_in?
+            @characters = current_player.characters # shows the index of characters
         erb :'characters/index'
+        end
     end
 
     get '/characters/new' do
-        @character = Character.new
         erb :'characters/new'
     end
 
-    post '/characters' do
-        @character=Character.create(params)
-        redirect to "/characters/#{@character.id}"
+    post '/characters/new' do
+        binding.pry
+        character = Character.new(params)
+        if character.save
+            redirect to "/characters/#{@character.id}"
+        else
+            redirect to "characters/new"
+        end
     end
 
     get '/characters/:id' do 
