@@ -31,7 +31,7 @@ class DMsController < ApplicationController
 
     get "/logout" do
         session.clear
-        redirect to "/login"
+        redirect to "/"
     end
 
 

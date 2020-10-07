@@ -1,14 +1,13 @@
 <h1>Your Arsenal of Characters:</h1>
 
-<ol><p>
+<p>
 <% @characters.each do |character| %>
-    <li>
-    <a href="/characters/<%= character.id %>">
-    <%=character.character_name%>
-    </a>
-    </li>
+    <ol>
+    <a href="/characters/<%= character.id %>"><%=character.character_name%></a>
+    </ol>
+    <br>
 <%end%>
-</p></ol>
+</p>
 
 <h5><a href="/characters/new">Create a new character!</a></h5>
 <br><br>

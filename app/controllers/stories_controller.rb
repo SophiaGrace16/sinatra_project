@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
 
     get '/stories' do 
         redirect_if_dm_not_logged_in
-        @stories = Story.all # shows the index of stories
+        @stories = current_dm.all # shows the index of stories
         erb :'stories/index'
     end
 

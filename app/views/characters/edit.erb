@@ -6,7 +6,7 @@
 <h2>Well? Get it on with it then! Change what you will!</h2></br>
 
 <label for= “character_name”>Character Name:</label>
-<p><input type="text" name="character_name" id="character_name" value ="<%=@character.name%>"></p></br>
+<p><input type="text" name="character_name" id="character_name" value ="<%=@character.character_name%>"></p></br>
 
 <label for= “character_class”>Class:</label>
 <p><input type="text" name="character_class" id="character_class" value ="<%=@character.character_class%>"></p></br>
@@ -40,7 +40,7 @@
 
 <label for= “character_story”>Character Story:</label>
 <p>
-<textarea type="text" name="character_story" id="character_story" value ="<%=@character.story%>" rows="10" cols="50">"<%=@character.story%>"</textarea>
+<textarea type="text" name="character_story" id="character_story" value ="<%=@character.character_story%>" rows="10" cols="50">"<%=@character.character_story%>"</textarea>
 </p></br>
-<input type='submit' id='submit' value='Create Character!'
+<input type='submit' id='submit' value='Edit Character!'>
 </form>

@@ -1,8 +1,8 @@
-<h1>@character.name</h1>
+<h1><%=@character.character_name%></h1>
 
-<label for= “class”>Class:</label>
+<label for= “character_class”>Class:</label>
 <p>
-<%=@character.class%>
+<%=@character.character_class%>
 </p>
 
 <label for= “level”>Level:</label>
@@ -52,15 +52,18 @@
 
 <label for= “character_story”>Character Story:</label>
 <p>
-<%=@character.story%>
+<%=@character.character_story%>
 </p>
 
-<a href="/characters/<%=@character.id%>/edit">Need to change something? Click here!</a></br>
-<a href="/characters">Click here to see all of your characters</a></br>
-<a href="/characters/new">Create a new character</a></br>
+<a href="/characters/<%=@character.id%>/edit">Need to change something? Click here!</a>
+<br></br>
+<a href="/characters">Click here to see all of your characters</a>
+<br></br>
+<a href="/characters/new">Create a new character</a>
+<br></br>
 
-<h6>Want to delete this character?</h6>
-<p>WARNING. This action is irreversible.</p>
+<h5>Want to delete this character?</h5>
+<h6>WARNING. This action is irreversible.</h6>
 <form action="/characters/<%=@character.id%>" method="POST">
     <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value ="Delete Character">
