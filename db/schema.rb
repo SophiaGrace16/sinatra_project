@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_174551) do
+ActiveRecord::Schema.define(version: 2020_10_07_145701) do
 
   create_table "characters", force: :cascade do |t|
     t.string "character_name"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_174551) do
   create_table "stories", force: :cascade do |t|
     t.integer "num_of_players"
     t.string "title"
-    t.string "type"
+    t.string "story_type"
     t.string "setting"
     t.string "monsters"
     t.string "final_boss"
