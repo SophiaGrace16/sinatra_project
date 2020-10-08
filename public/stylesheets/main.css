@@ -13,14 +13,18 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: rgba(20, 20, 20, 0.64);
+    background-image: url('/images/dragon.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     color: #333;
-    font-family: Sans-Serif;
+    font-family: 'Fredericka the Great', cursive;
     line-height: 18px;
   }
 
   .wrapper {
-    background: #fff;
+    background: rgba(101, 71, 71, 0.353);
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -31,23 +35,38 @@
   }
 
   h1 {
+    color: rgb(164, 164, 164);
     font-size: 36px;
     line-height: 54px;
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
+    color: rgb(164, 164, 164);
+    border-bottom: 2px solid rgb(234, 227, 227);
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
   }
 
   h3 {
+    color: rgb(164, 164, 164);
     font-size: 18px;
     line-height: 36px;
   }
 
+  h5 {
+    color: rgb(164, 164, 164);
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
   p {
+    color: rgb(164, 164, 164);
     font-size: 16px;
     margin-bottom: 18px;
   }
@@ -57,8 +76,10 @@
   }
 
   .content {
-    float: left;
-    width: 60%; /* 480px / 800px */
+  color: rgb(164, 164, 164);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   .sidebar {
@@ -74,6 +95,8 @@
   }
 
   .branding {
+    color: rgb(164, 164, 164);
+    font-size: 16px;
     clear: both;
   }
 
@@ -85,42 +108,61 @@
 }
 
 label {
+  color: rgb(164, 164, 164);
   font-size: 0.83em;
   font-weight: bold;
 }
 
 .button {
-  background-color: #990000;
+  background-color: #99000000;
+  background-image: url('/images/magmabutton1.png');
+  background-blend-mode: color-dodge;
+  background-size: auto;
   color: white;
   padding: 5px;
   font-size: 16px;
-  border-radius: 12px;
-  border: 2px solid #4CAF50
-}
-
-.button {
+  height: 80px;
+  width: 200px;
   position: relative;
   display: inline-block;
 }
 
-.button-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
 .button-content a {
-  color: black;
-  padding: 12px 12px;
+  color: rgb(255, 248, 248);
+  padding: 30px;
+  text-align: center;
   text-decoration: none;
   display: block;
 }
 
 .main-image {
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 25%;
+}
+
+.logo-right{
+  float: right;
+  width:50px;
+  height:50px;
+  margin-right:15px;
+}
+
+.logo-left{
+  float: left;
+  width:50px;
+  height:50px;
+  margin-right:15px;
+}
+
+.div-a {
+  text-align: center;
+}
+
+.href {
+  color: rgb(255, 248, 248);
 }
 
 @media screen and (max-width: 600px) {

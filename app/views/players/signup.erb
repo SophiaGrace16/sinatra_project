@@ -1,14 +1,8 @@
 <html>
-<head>
-<style>
-img {
-  float: left;
-}
-</style>
-</head>
+
 <header>
 <div class="imgcontainer">
-    <img src="/images/dice.png" alt="dice" class="logo" style="width:50px;height:50px;margin-right:15px;">
+    <img src="/images/dice.png" alt="dice" class="logo-left">
 </div>
 <h1>Create your Player D&D Account!</h1>
 </header>
@@ -28,7 +22,7 @@ img {
 <input type="submit" value = "Signup!">
 </form>
 
-<footer class="branding">
+footer class="branding">
     <% if player_logged_in?%>
       <h4>Welcome <%= current_player.username%></h4>
       <h4><a href="/logout">Log Out</a></h4>
