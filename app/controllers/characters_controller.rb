@@ -29,8 +29,9 @@ class CharactersController < ApplicationController
 
     post '/characters' do
         character = Character.new(params)
-        if character.save
-            character.player_id = current_player.id
+        character.player_id = current_player.id
+        if character.player_id == current_player.id
+            character.save
             redirect to "/characters/#{character.id}"
         else
             redirect to "/characters/new"

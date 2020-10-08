@@ -31,12 +31,15 @@ class StoriesController < ApplicationController
 
     post '/stories' do
         story = Story.new(params)
-        if story.save
+        story.dm_id = current_dm.id
+        if story.dm_id == current_dm.id
+            story.save
             redirect to "/stories/#{story.id}"
         else
             redirect to "/stories/new"
         end
     end
+    #story does not save to dm id
 
     patch '/stories/:id' do
         @story = Story.find_by_id(params[:id])
@@ -47,13 +50,14 @@ class StoriesController < ApplicationController
             redirect to "/stories/new"
         end
     end
-    #35:17 Live Lecture User authen
+    #edit works
 
     delete "/stories/:id" do
         @story = Story.find_by_id(params[:id])
-        if @story.dm_id == current_user.id
+        if @story.dm_id == current_dm.id
             @story.destroy
         end
         redirect to "/stories"
     end  
+    #delete works
 end
