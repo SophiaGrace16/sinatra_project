@@ -65,10 +65,25 @@
     font-weight: bold;
 }
 
+h6 {
+  color: rgb(164, 164, 164);
+  display: block;
+  font-size: 0.67em;
+  margin-block-start: 2.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
   p {
     color: rgb(164, 164, 164);
     font-size: 16px;
     margin-bottom: 18px;
+  }
+
+  a {
+    color: rgb(255, 248, 248);
+    font-size: 14px;
   }
 
   .main {
@@ -97,7 +112,6 @@
   .branding {
     color: rgb(164, 164, 164);
     font-size: 16px;
-    clear: both;
   }
 
   footer.branding {
@@ -161,9 +175,11 @@ label {
   text-align: center;
 }
 
-.href {
-  color: rgb(255, 248, 248);
+.div-b {
+  text-align: right;
 }
+
+
 
 @media screen and (max-width: 600px) {
   .wrapper {

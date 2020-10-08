@@ -15,13 +15,14 @@
 <p> Beware the smiling dm.... </p>
 
 <footer class="branding">
-    <% if player_logged_in?%>
-      <h4>Welcome <%= current_player.username%></h4>
-      <h4><a href="/logout">Log Out</a></h4>
+    <% if player_logged_in? %>
+    <small>Welcome <%= current_player.username %> <a href="/logout">Log Out</a></small>
     <% else %>
       <h4><a href="/">Log In</a></h4>
     <% end %>
+    <div class="div-b">
     <small>&copy; 2020 <strong>Sophia White</strong></small>
-      </footer>
+    </div>
+  </footer>
 
 </html>
