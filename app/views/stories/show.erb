@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <h1><%=@story.title%></h1>
 
 <label for= “title”>Title:</label>
@@ -63,3 +64,15 @@
     <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value ="Delete Story">
 </form>
+
+<footer class="branding">
+    <% if dm_logged_in? %>
+      <h4>Welcome <%= current_dm.username %></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
+</html>

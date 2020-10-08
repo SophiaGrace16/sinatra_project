@@ -28,4 +28,14 @@ img {
 <h5>Not a registered Dungeon Master yet?</h5>
 <h6><a href="/dms/signup">Click here to sign up!</a></h6>
 
+<footer class="branding">
+    <% if dm_logged_in? %>
+      <h4>Welcome <%= current_dm.username %></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
 </html>

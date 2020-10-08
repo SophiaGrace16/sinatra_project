@@ -8,7 +8,6 @@ class CharactersController < ApplicationController
 
     get '/characters/new' do
         redirect_if_player_not_logged_in
-        @character=Character.all
         erb :'characters/new'
     end
 
@@ -20,7 +19,6 @@ class CharactersController < ApplicationController
 
     get '/characters/:id/edit' do
         redirect_if_player_not_logged_in
-        # @player = Player.all
         @character = Character.find_by_id(params[:id])
         if @character.player_id == current_player.id
             erb :'characters/edit'
@@ -32,11 +30,14 @@ class CharactersController < ApplicationController
     post '/characters' do
         character = Character.new(params)
         if character.save
+            character.player_id = current_player.id
             redirect to "/characters/#{character.id}"
         else
-            redirect to "characters/new"
+            redirect to "/characters/new"
         end
     end
+
+    #not saving to player
 
     patch '/characters/:id' do
         @character = Character.find_by_id(params[:id])
@@ -47,7 +48,7 @@ class CharactersController < ApplicationController
             redirect to "/characters/new"
         end
     end
-    #35:17 Live Lecture User authen
+    #edit is working
 
     delete "/characters/:id" do
         @character = Character.find_by_id(params[:id])
@@ -56,7 +57,6 @@ class CharactersController < ApplicationController
         end
         redirect to "/characters"
     end  
-
-    #note to self, character isn't actually dropping from table
+    #Working, save function is not
 
 end

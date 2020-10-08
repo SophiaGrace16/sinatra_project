@@ -1,7 +1,7 @@
 class DMsController < ApplicationController
 
     get "/dms/login" do
-        erb :"dms/login"
+        erb :'dms/login'
     end
 
     post '/dms/login' do
@@ -26,7 +26,6 @@ class DMsController < ApplicationController
         else
         erb :"dms/signup"
         end
- 
     end
 
     get "/logout" do

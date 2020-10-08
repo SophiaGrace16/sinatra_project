@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <h1><%=@character.character_name%></h1>
 
 <label for= “character_class”>Class:</label>
@@ -68,3 +69,15 @@
     <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value ="Delete Character">
 </form>
+
+<footer class="branding">
+    <% if player_logged_in?%>
+      <h4>Welcome <%= current_player.username%></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
+</html>

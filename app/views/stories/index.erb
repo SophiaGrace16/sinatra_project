@@ -1,13 +1,27 @@
+<!DOCTYPE html>
 <h1>Your Collection of Stories:</h1>
 
-<ol><p>
+<p>
 <% @stories.each do |story| %>
     <li>
-    <a href="/stories/<%= story.id %>">
-    <%= story.title %>
-    </a>
+    <a href="/stories/<%= story.id %>"><%= story.title %></a>
     </li>
+    <br>
 <%end%>
-</p></ol>
+</p>
 
+<h5><a href="/stories/new">Create a new story!</a></h5>
+<br><br>
 <p> Don't smile too much... they will know you are up to something! </p>
+
+<footer class="branding">
+    <% if dm_logged_in? %>
+      <h4>Welcome <%= current_dm.username %></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
+</html>

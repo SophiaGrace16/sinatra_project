@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+
 <h1>What? You mean you want to change the story?</h1>
 <p> That does not seem fair...</p>
-<form action="/stories/<%=@storeies.id%>" method="POST">
+<form action="/stories/<%=@story.id%>" method="POST">
+<input type="hidden" name='_method' value="patch">
 <h2>Edit the details of your tale:</h2></br>
 
 <label for= “title”>Title:</label>
@@ -37,3 +40,15 @@
 
 <input type='submit' id='submit' value='Edit Story!'>
 </form>
+
+<footer class="branding">
+    <% if dm_logged_in? %>
+      <h4>Welcome <%= current_dm.username %></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
+</html>

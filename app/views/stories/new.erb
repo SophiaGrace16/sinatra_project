@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <h1>Ahhh... a new way to torture your players?</h1>
 <p> Remember to be nice... We still want them to have fun!</p>
 <form action="/stories" method="POST">
@@ -37,3 +38,15 @@
 
 <input type='submit' id='submit' value='Create Story!'>
 </form>
+
+<footer class="branding">
+    <% if dm_logged_in? %>
+      <h4>Welcome <%= current_dm.username %></h4>
+      <h4><a href="/logout">Log Out</a></h4>
+    <% else %>
+      <h4><a href="/">Log In</a></h4>
+    <% end %>
+    <small>&copy; 2020 <strong>Sophia White</strong></small>
+      </footer>
+
+</html>

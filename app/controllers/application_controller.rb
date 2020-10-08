@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
 
     def redirect_if_player_not_logged_in
       if !player_logged_in?
-        redirect "/login"
+        redirect "/players/login"
       end
     end
 
@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
 
     def redirect_if_dm_not_logged_in
       if !dm_logged_in?
-        redirect "/login"
+        redirect "/dms/login"
       end
     end
 

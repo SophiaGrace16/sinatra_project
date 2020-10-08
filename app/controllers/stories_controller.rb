@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
 
     get '/stories' do 
         redirect_if_dm_not_logged_in
-        @stories = current_dm.all # shows the index of stories
+        @stories = current_dm.stories.all # shows the index of stories
         erb :'stories/index'
     end
 
@@ -20,9 +20,9 @@ class StoriesController < ApplicationController
 
     get '/stories/:id/edit' do
         redirect_if_dm_not_logged_in
-        @dm = DM.all
+        # @dm = DM.all
         @story = Story.find_by_id(params[:id])
-        if @story.user.id == current_dm.id
+        if @story.dm_id == current_dm.id
             erb :'stories/edit'
         else
             redirect to "/stories"
@@ -32,9 +32,9 @@ class StoriesController < ApplicationController
     post '/stories' do
         story = Story.new(params)
         if story.save
-            redirect to "/stories/#{@story.id}"
+            redirect to "/stories/#{story.id}"
         else
-            redirect to "stories/new"
+            redirect to "/stories/new"
         end
     end
 
@@ -51,10 +51,9 @@ class StoriesController < ApplicationController
 
     delete "/stories/:id" do
         @story = Story.find_by_id(params[:id])
-        if @story.user.id == current_user.id
+        if @story.dm_id == current_user.id
             @story.destroy
         end
         redirect to "/stories"
     end  
-
 end

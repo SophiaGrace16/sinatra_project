@@ -18,15 +18,7 @@
 
         <%= yield %>
 
-      <footer class="branding">
-      <% if player_logged_in? || dm_logged_in? %>
-      <h4>Welcome <%= current_player.username||current_dm.username %></h4>
-      <h4><a href="/logout">Log Out</a></h4>
-    <% else %>
-      <h4><a href="/login">Log In</a></h4>
-    <% end %>
-    <small>&copy; 2020 <strong>Sophia White</strong></small>
-      </footer>
+      
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
