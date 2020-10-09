@@ -43,10 +43,12 @@ class CharactersController < ApplicationController
     patch '/characters/:id' do
         @character = Character.find_by_id(params[:id])
         params.delete("_method")
-        if @character.update(params)
-            redirect to "/characters/#{@character.id}"
-        else
-            redirect to "/characters/new"
+        if @character.player_id == current_player.id
+            if @character.update(params)
+                redirect to "/characters/#{@character.id}"
+            else
+                redirect to "/characters/new"
+            end
         end
     end
     #edit is working
@@ -55,8 +57,11 @@ class CharactersController < ApplicationController
         @character = Character.find_by_id(params[:id])
         if @character.player_id == current_player.id
             @character.destroy
+            redirect to "/characters"
+        else
+            erb :"welcome"
         end
-        redirect to "/characters"
+        
     end  
     #Working, save function is not
 

@@ -44,10 +44,12 @@ class StoriesController < ApplicationController
     patch '/stories/:id' do
         @story = Story.find_by_id(params[:id])
         params.delete("_method")
-        if @story.update(params)
-            redirect to "/stories/#{@story.id}"
-        else
-            redirect to "/stories/new"
+        if story.dm_id == current_dm.id
+            if @story.update(params)
+                redirect to "/stories/#{@story.id}"
+            else
+                redirect to "/stories/new"
+            end
         end
     end
     #edit works
@@ -56,8 +58,10 @@ class StoriesController < ApplicationController
         @story = Story.find_by_id(params[:id])
         if @story.dm_id == current_dm.id
             @story.destroy
+            redirect to "/stories"
+        else
+            erb :"welcome"
         end
-        redirect to "/stories"
     end  
     #delete works
 end

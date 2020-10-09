@@ -97,6 +97,14 @@ h6 {
   a {
     color: rgb(255, 248, 248);
     font-size: 14px;
+    text-decoration: none;
+  }
+
+  small {
+    color: rgb(255, 248, 248);
+    font-size: 14px;
+    font-family: 'Homemade Apple', cursive;
+    text-decoration: none;
   }
 
   .main {
