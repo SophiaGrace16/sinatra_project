@@ -67,8 +67,8 @@
 
 <footer class="branding">
     <% if dm_logged_in? %>
-    <small>Welcome    <%= current_dm.username %>      <a href="/logout">Log Out</a></small>
-    <% else %>
+    <small>Welcome<%= current_dm.username %><a href="/logout">Log Out</a></small>
+        <% else %>
       <small><a href="/">Log In</a></small>
     <% end %>
     <div class="div-b">

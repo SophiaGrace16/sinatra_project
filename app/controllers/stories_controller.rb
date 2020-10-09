@@ -44,7 +44,7 @@ class StoriesController < ApplicationController
     patch '/stories/:id' do
         @story = Story.find_by_id(params[:id])
         params.delete("_method")
-        if story.dm_id == current_dm.id
+        if @story.dm_id == current_dm.id
             if @story.update(params)
                 redirect to "/stories/#{@story.id}"
             else

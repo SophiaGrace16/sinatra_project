@@ -23,8 +23,8 @@
 
 <footer class="branding">
     <% if player_logged_in? %>
-    <small>Welcome    <%= current_player.username %>      <a href="/logout">Log Out</a></small>
-    <% else %>
+    <small>Welcome<%= current_player.username %><a href="/logout">Log Out</a></small>
+        <% else %>
     <small><a href="/">Log In</a></small>
     <% end %>
     <div class="div-b">
