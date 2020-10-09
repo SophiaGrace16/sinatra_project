@@ -46,6 +46,7 @@
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
+    font-family: 'Homemade Apple', cursive;
   }
 
   h3 {
@@ -53,6 +54,17 @@
     font-size: 18px;
     line-height: 36px;
   }
+
+  h4 {
+    color: rgb(164, 164, 164);
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Homemade Apple', cursive;
+}
 
   h5 {
     color: rgb(164, 164, 164);
@@ -63,6 +75,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    font-family: 'Homemade Apple', cursive;
 }
 
 h6 {
@@ -125,6 +138,7 @@ label {
   color: rgb(164, 164, 164);
   font-size: 0.83em;
   font-weight: bold;
+  font-family: 'Josefin Slab', serif;
 }
 
 .button {
@@ -144,9 +158,11 @@ label {
 .button-content a {
   color: rgb(255, 248, 248);
   padding: 30px;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
   display: block;
+  text-shadow: #01010100;
 }
 
 .main-image {
