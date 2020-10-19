@@ -2,8 +2,8 @@
 
 HTTP VERB | ROUTE                | ACTION
 ----------|----------------------|----------
-GET       | /CHARACTERS  x       | INDEX     - SHOWS THE CHARACTERS INDEX
-GET       | /STORIES             | INDEX     - SHOWS THE STORIES INDEX
+GET       | /CHARACTERS  x       | INDEX     - SHOWS THE CHARACTERS 
+GET       | /STORIES             | INDEX     - SHOWS THE STORIES 
 GET       | /CHARACTERS/:ID  x   | SHOW      - SHOWS THE CHARACTER
 GET       | /STORIES/:ID         | SHOW      - SHOWS THE CHARACTER
 GET       | /CHARACTERS/NEW   x  | NEW       - SHOW THE NEW FORM
@@ -53,7 +53,7 @@ PATCH     | /STORIES/:ID         | EDIT
 
 <html>
 <style>
-.dropbtn {
+.button {
   background-color: #990000;
   color: white;
   padding: 16px;
@@ -71,7 +71,7 @@ PATCH     | /STORIES/:ID         | EDIT
   position: absolute;
   background-color: #f1f1f1;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px (0,0,0,0.2);
   z-index: 1;
 }
 
@@ -86,7 +86,7 @@ PATCH     | /STORIES/:ID         | EDIT
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #ff3e00;}
+.dropdown:hover .button {background-color: #ff3e00;}
 </style>
 
 <h1>Dungeons & Dragons Database</h1>
@@ -99,7 +99,7 @@ PATCH     | /STORIES/:ID         | EDIT
 <h5>Are you a player or a dungeon master?</h5>
 
 <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
+  <button class="button">Dropdown</button>
   <div class="dropdown-content">
     <a href="#">Dungeon Master</a>
     <a href="#">Player</a>

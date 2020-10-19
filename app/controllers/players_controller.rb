@@ -7,7 +7,10 @@ class PlayersController < ApplicationController
 
     post '/players/login' do
         @player = Player.find_by(username: params[:username])
-        if @player && @player.authenticate(params[:password])
+        if @player && @player.authenticate(params[:password]) #links to helper methods
+            #utilize the Bcrypt authenticate method which takes in an argument of the password params. 
+            #If a user exists and the password matches, the id of the user instance is stored in a session, 
+            #and they are logged in. Otherwise, we are redirected back to the login form page
             session[:player_id] = @player.id
             redirect_if_player_logged_in
         else

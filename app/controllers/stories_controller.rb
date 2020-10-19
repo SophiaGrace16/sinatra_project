@@ -39,7 +39,6 @@ class StoriesController < ApplicationController
             redirect to "/stories/new"
         end
     end
-    #story does not save to dm id
 
     patch '/stories/:id' do
         @story = Story.find_by_id(params[:id])
